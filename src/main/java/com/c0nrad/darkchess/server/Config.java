@@ -13,10 +13,10 @@ public class Config {
 
     public static Properties properties;
 
-    public static void LoadProperties() throws FileNotFoundException, IOException {
+    public static void LoadProperties() throws IOException {
         properties = new Properties();
-        
-        InputStream input = new FileInputStream("./config/config.properties");
-        properties.load(input);
+
+        try (InputStream input = new FileInputStream("./config/config.properties")) {
+            properties.load(input);
     }
 }
