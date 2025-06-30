@@ -11,6 +11,8 @@ import com.c0nrad.darkchess.models.Story;
 import org.bson.types.ObjectId;
 import xyz.morphia.Datastore;
 
+private static final String P_ROW = "PPPPPPPP";
+
 public class StoryDatastore {
     public static Story Find(String storyId) {
         Datastore d = MorphiaSingleton.GetDatastore();
@@ -42,7 +44,7 @@ public class StoryDatastore {
 
         String[] layout ={
             "    K   ", 
-            "PPPPPPPP",
+            P_ROW,
             "        ",
             "        ",
             "        ",
@@ -91,7 +93,7 @@ public class StoryDatastore {
 
         String[] layout3 ={
             "RNBQKBNR", 
-            "PPPPPPPP",
+            P_ROW,
             "        ",
             "        ",
             "        ",
@@ -115,8 +117,8 @@ public class StoryDatastore {
 
         String[] layout4 ={
             "PPPPKPPP", 
-            "PPPPPPPP",
-            "PPPPPPPP",
+            P_ROW,
+            P_ROW,
             "        ",
             "        ",
             "        ",
@@ -137,7 +139,7 @@ public class StoryDatastore {
 
         String[] layout5 ={
             "RNBQKBNR", 
-            "PPPPPPPP",
+            P_ROW,
             "        ",
             "        ",
             "        ",
