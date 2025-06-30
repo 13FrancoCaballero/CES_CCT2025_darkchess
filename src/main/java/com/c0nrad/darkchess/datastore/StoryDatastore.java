@@ -11,9 +11,8 @@ import com.c0nrad.darkchess.models.Story;
 import org.bson.types.ObjectId;
 import xyz.morphia.Datastore;
 
-private static final String P_ROW = "PPPPPPPP";
-
 public class StoryDatastore {
+    private static final String P_ROW = "PPPPPPPP";
     public static Story Find(String storyId) {
         Datastore d = MorphiaSingleton.GetDatastore();
         ObjectId objectId = new ObjectId(storyId);
